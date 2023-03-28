@@ -1,0 +1,13 @@
+﻿<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <h3 role="alert">Sorry, there's nothing at this address.</h3>
+            <img class="img-fluid" width="200" src="https://png.pngtree.com/png-vector/20210120/ourlarge/pngtree-geek-emoji-in-3d-png-image_2771058.png" />
+        </LayoutView>
+    </NotFound>
+</Router>
